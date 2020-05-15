@@ -12,6 +12,8 @@ Football Manager のカスタム顔画像は、XML ファイルで指定され�
 本ツールは Python 3 を利用するのでまず Python 3 をインストールしてください。また Python のライブラリ pandas を利用したので pandas もインストールしてください。
 あと CSV の知識があれば良いと思います（Excel があれば CSV の知識は必要ないです）。
 
+## やり方
+
 ### フェイスパックのダウンロード
 
 まず、[EST Touiro 氏からフェイスパックをダウンロードしてください](http://estouiro.wp.xdomain.jp/2019/12/25/j-league-facepack-footballmanager-2020/)。最新バージョンは ver 2.1.1 です。
@@ -51,6 +53,8 @@ UID と Name 以外のカラムを非表示し、UID が 1900000000 以降の記
 ### 最後の設定
 
 それではテキストエディタで config.py を開いてください。これは設定ファイルですが、「fm_data_path」のとこはパソコンの環境によって変わるので、自身の FM2020 のデータフォルダを探してください。デフォルトでは「`ドキュメント\Sports Interactive\Football Manager 2020`」ですが、自分の環境に合わせてフォルダパスを変更してください。ちなみにバックスラッシュが二つ「\\」です。
+
+本ツールでは安全性を考慮するため古い画像の削除機能を提供しません。繰り返し使用だとまず「`ドキュメント\Sports Interactive\Football Manager 2020\Graphics`」の「j-league」フォルダを削除してください。
 
 ### ツールを実行
 
