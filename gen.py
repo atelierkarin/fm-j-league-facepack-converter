@@ -29,10 +29,13 @@ Path(target_path).mkdir(parents=True, exist_ok=True)
 
 # 古いファイルを削除
 if with_delete:
-  for file in os.listdir(target_path):
-    if file.endswith('.png'):
-      os.remove(file)
-  os.remove(target_path + "/config.xml")
+  try:
+    for file in os.listdir(target_path):
+      if file.endswith('.png'):
+        os.remove(file)
+    os.remove(target_path + "/config.xml")
+  except FileNotFoundError:
+    pass
 
 # 既存プレイヤーのアイコンをコピー
 distutils.dir_util.copy_tree(facepack_path + '/001_Original Players', fm_data_path + '/Graphics/j-league/001_Original Players')
